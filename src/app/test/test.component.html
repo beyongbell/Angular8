@@ -1,0 +1,201 @@
+<h2> Welcome {{ name }} </h2>
+<hr>
+
+<h1> Interpolation </h1>
+<p> {{ 2 +  2 }} </p>
+<p> {{ name.length }}</p>
+<p> {{ name.toUpperCase() }}</p>
+<p> {{ greetUser() }}</p>
+
+<br>
+<hr>
+<h1> Property </h1>
+<input [id]="myId" type="text" value="tinnakorn">
+<input id="{{myId}}" type="text" value="tinnakorn">
+<input [disabled]="isDisabled" type="text" value="tinnakorn">
+<input bind-disabled="isDisabled" type="text" value="tinnakorn">
+
+<br>
+<hr>
+<h1> Class Binding </h1>
+<p  class="text-success"> {{ name }} </p>
+<p  [class]="successClass"> {{ name }} </p>
+<p [class.text-danger]="hasError"> {{ name }} </p>
+<p [ngClass]="messageClasses">{{ name }}</p>
+
+<br>
+<hr>
+<h1> Style Binding </h1>
+<p [style.color]="'orange'"> Style Binding </p>
+<p [style.color]="hasError ? 'red' : 'green' "> Style Binding </p>
+<p [style.color]="highlightColor"> Style Binding </p>
+<p [ngStyle]="titleStyles"> Style Binding </p>
+
+<br>
+<hr>
+<h1> Event Binding </h1>
+<button (click)="onClick()"> Geet </button>
+<button (click)="onClickEvent($event)"> Event </button>
+<button (click)="greeting = 'Welcome to BellNajA'"> Change </button> {{ greeting }}
+
+<br>
+<hr>
+<h1> Template Reference Variables </h1>
+<input #myInput type="text">
+<button (click)="logMessage(myInput.value)"> Log </button>
+
+<br>
+<hr>
+<h1> Two Way Binding </h1>
+<input [(ngModel)]="name" type="text"> {{ name }}
+
+<br>
+<hr>
+<h1> ngIf Directive </h1>
+<p *ngIf="displayName"> Test </p>
+<ng-template [ngIf]="displayName"><div>Content to render when condition is true.</div></ng-template>
+<div *ngIf="displayName; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>Content to render when condition is true.</ng-template>
+<ng-template #elseBlock>Content to render when condition is false.</ng-template>
+
+<br>
+<hr>
+<h1> ngSwitch Directive </h1>
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'">   Red </div>
+    <div *ngSwitchCase="'green'"> Green </div>
+    <div *ngSwitchCase="'blue'">  Blue </div>
+    <div *ngSwitchDefault>  Default </div>
+</div>
+
+<br>
+<hr>
+<h1> ngFor Directive </h1>
+<div *ngFor="let color of colors">
+    <p>{{ color }}</p>
+</div>
+
+<div *ngFor="let color of colors; index as i">
+    <p>{{ i + 1 }} {{ color }}</p>
+</div>
+
+<div *ngFor="let color of colors; first as f">
+    <p>{{ f }} {{ color }}</p>
+</div>
+
+<div *ngFor="let color of colors; last as l">
+    <p>{{ l }} {{ color }}</p>
+</div>
+
+<div *ngFor="let color of colors; odd as o">
+    <p>{{ o }} {{ color }}</p>
+</div>
+
+<div *ngFor="let color of colors; even as e">
+    <p>{{ e }} {{ color }}</p>
+</div>
+
+<br>
+<hr>
+<h1> Component Interaction </h1>
+<p>Hello {{ parentData }}</p>
+<p>Hello {{ first_name }}</p>
+<button (click)="fireEvent()"> Send Ecent </button>
+
+
+<br>
+<hr>
+<h1> Pipes </h1>
+<p> {{ fullname | lowercase }} </p>
+<p> {{ fullname | uppercase }} </p>
+<p> {{ message | titlecase }} </p>
+<p> {{ name | slice:3 }} </p>
+<p> {{ name | slice:3:5 }} </p>
+<p> {{ person | json }} </p>
+<p> {{ 5.678 | number:'1.2-3' }} </p>
+<p> {{ 5.678 | number:'3.4-5' }} </p>
+<p> {{ 5.678 | number:'3.1-2' }} </p>
+<p> {{ 0.25 | percent  }} </p>
+<p> {{ 0.25 | currency }} </p>   
+<p> {{ 0.25 | currency: 'THB' }} </p>   
+<p> {{ date }} </p>
+<p> {{ date | date: 'short' }}</p>
+<p> {{ date | date: 'shortDate' }}</p>
+<p> {{ date | date: 'shortTime' }}</p>
+
+
+<br>
+<hr>
+<h1> Services </h1>
+<app-employee-list></app-employee-list>
+<p> Create Service Employee </p>
+
+<br>
+<hr>
+<h1> HTTP and Observables </h1>
+<p> Import HttpClient Module </p>
+<app-employee-detail></app-employee-detail>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
