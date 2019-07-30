@@ -14,13 +14,17 @@ import { AppComponent } from './app.component';
 import { TestComponent } from './components/test/test.component';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { EmployeeDetailComponent } from './components/employee-detail/employee-detail.component';
+import { DepartmentListComponent } from './components/department-list/department-list.component';
+import { MemberListComponent } from './components/member-list/member-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
     EmployeeListComponent,
-    EmployeeDetailComponent
+    EmployeeDetailComponent,
+    DepartmentListComponent,
+    MemberListComponent
   ],
   imports: [
     BrowserModule,
