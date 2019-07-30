@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { IEmployee } from '../interface/employee';
+import { IEmployee } from '../interfaces/employee';
 import { throwError, Observable } from 'rxjs'
 import { catchError } from 'rxjs/operators';
 

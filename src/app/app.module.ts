@@ -1,13 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { TestComponent } from './test/test.component';
-import { EmployeeListComponent } from './employee-list/employee-list.component';
-import { EmployeesService } from './services/employees.service';
+
+// Modules
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+
+// Services
+import { EmployeesService } from './services/employees.service';
+
+// Components
+import { AppComponent } from './app.component';
+import { TestComponent } from './components/test/test.component';
+import { EmployeeListComponent } from './components/employee-list/employee-list.component';
+import { EmployeeDetailComponent } from './components/employee-detail/employee-detail.component';
 
 @NgModule({
   declarations: [
