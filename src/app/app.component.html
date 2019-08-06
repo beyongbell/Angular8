@@ -5,7 +5,16 @@
     <br> <br>
     {{ message }}
   </h1>
+  <h1> Router Components </h1>
+  <nav>
+    <a routerLink="/departments" routerLinkActive="active"> Departments </a>
+    ||
+    <a routerLink="/members"     routerLinkActive="active"> Members </a>
+  </nav>
+  <router-outlet></router-outlet>
+  <hr>
   <app-test (childEvent)="message=$event" [parentData]="firstname"></app-test>
 </div>
+
 
 
